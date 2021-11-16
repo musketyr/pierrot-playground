@@ -1,5 +1,5 @@
 name: Pierrot Playground
-on: [workflow_dispatch]
+on: [push, workflow_dispatch]
 jobs:
   pierrot:
     name: Install Pierrot and Show Help
@@ -9,4 +9,5 @@ jobs:
       with:
         candidate: pierrot
         version: 0.9.9
+    - run: tree ~/.sdkman
     - run: pierrot --help
